@@ -2,10 +2,10 @@ import { Stack, Flex, Text, Image } from '@chakra-ui/react'
 
 export const CityCard = () => {
   return (
-    <Stack w="256px" borderRadius="4px" spacing={0} mb="48px">
+    <Stack w="256px" borderRadius="4px" spacing={0}>
       <Image
         borderTopRadius="4px"
-        src="/images/background.png"
+        src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
         alt="city"
         width="256"
         height="173"

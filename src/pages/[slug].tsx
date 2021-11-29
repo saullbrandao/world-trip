@@ -5,7 +5,8 @@ import {
   Heading,
   Stack,
   Flex,
-  Image,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import { CityCard } from '../components/CityCard'
@@ -111,15 +112,26 @@ const Continent: NextPage = () => {
       <Heading mx="140px" mb="40px">
         Cidades +100
       </Heading>
-      <Flex mb="35px" mx="140px" flexWrap="wrap" justify="space-between">
-        <CityCard />
-        <CityCard />
-        <CityCard />
-        <CityCard />
-        <CityCard />
-        <CityCard />
-        <CityCard />
-      </Flex>
+      <Wrap mb="35px" mx="140px" flexWrap="wrap">
+        <WrapItem>
+          <CityCard />
+        </WrapItem>
+        <WrapItem>
+          <CityCard />
+        </WrapItem>
+        <WrapItem>
+          <CityCard />
+        </WrapItem>
+        <WrapItem>
+          <CityCard />
+        </WrapItem>
+        <WrapItem>
+          <CityCard />
+        </WrapItem>
+        <WrapItem>
+          <CityCard />
+        </WrapItem>
+      </Wrap>
     </Flex>
   )
 }
