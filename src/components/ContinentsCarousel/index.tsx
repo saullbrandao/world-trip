@@ -1,13 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper'
 import { Heading, Text, Stack } from '@chakra-ui/react'
-
+import Link from 'next/link'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 type ContinentInfo = {
   id: string
+  slug: string
   title: string
   description?: string
   imageUrl?: string
@@ -45,14 +46,19 @@ export const ContinentsCarousel = ({ continents }: ContinentCarouselProps) => {
             justify="center"
             spacing="16px"
           >
-            <Heading
-              color="gray.100"
-              fontSize="48px"
-              lineHeight="72px"
-              fontWeight="bold"
-            >
-              {continent.title}
-            </Heading>
+            <Link href={`/${continent.slug}`} passHref>
+              <Heading
+                as="a"
+                color="gray.100"
+                fontSize="48px"
+                lineHeight="72px"
+                fontWeight="bold"
+                transition="filter 0.2s"
+                _hover={{ filter: 'brightness(0.8)' }}
+              >
+                {continent.title}
+              </Heading>
+            </Link>
             <Text
               color="gray.200"
               fontSize="24px"

@@ -9,6 +9,7 @@ import { TravelType } from '../components/TravelType'
 const continents = [
   {
     title: 'América do Norte',
+    slug: 'america-do-norte',
     id: '0',
     description: 'Lorem ipsum dolor sit amet',
     imageUrl:
@@ -17,6 +18,7 @@ const continents = [
   {
     title: 'América do Sul',
     id: '1',
+    slug: 'america-do-sul',
     description: 'Consectetur adipisicing elit',
     imageUrl:
       'https://images.unsplash.com/photo-1547212543-344cfbef90b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
@@ -24,12 +26,14 @@ const continents = [
   {
     title: 'Ásia',
     id: '2',
+    slug: 'asia',
     description: 'Arum natus in dolor dicta',
     imageUrl:
       'https://images.unsplash.com/photo-1533132824464-d286d371ffe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
   },
   {
     title: 'África',
+    slug: 'africa',
     id: '3',
     description: 'Beatae sapiente nostrum quibusdam',
     imageUrl:
@@ -37,6 +41,7 @@ const continents = [
   },
   {
     title: 'Europa',
+    slug: 'europa',
     id: '4',
     description: 'Minima doloribus sunt',
     imageUrl:
@@ -45,6 +50,7 @@ const continents = [
   {
     title: 'Oceania',
     id: '5',
+    slug: 'oceania',
     description: 'Maxime officiis suscipit autem',
     imageUrl:
       'https://images.unsplash.com/photo-1528800223624-764941bb49db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
