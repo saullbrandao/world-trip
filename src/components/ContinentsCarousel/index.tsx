@@ -50,8 +50,8 @@ export const ContinentsCarousel = ({ continents }: ContinentCarouselProps) => {
               <Heading
                 as="a"
                 color="gray.100"
-                fontSize="48px"
-                lineHeight="72px"
+                fontSize={['24px', '36px', '48px']}
+                lineHeight={['36px', '54px', '72px']}
                 fontWeight="bold"
                 transition="filter 0.2s"
                 _hover={{ filter: 'brightness(0.8)' }}
@@ -61,8 +61,8 @@ export const ContinentsCarousel = ({ continents }: ContinentCarouselProps) => {
             </Link>
             <Text
               color="gray.200"
-              fontSize="24px"
-              lineHeight="36px"
+              fontSize={['14px', '19px', '24px']}
+              lineHeight={['21px', '29px', '36px']}
               fontWeight="bold"
             >
               {continent.description}
