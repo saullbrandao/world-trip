@@ -1,4 +1,4 @@
-import { Flex, Link as ChakraLink, IconButton, Text } from '@chakra-ui/react'
+import { Flex, Link as ChakraLink } from '@chakra-ui/react'
 import logoImg from '../../public/images/logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,20 +10,31 @@ type HeaderProps = {
 
 export const Header = ({ showBackButton = false }: HeaderProps) => {
   return (
-    <Flex w="100%" mx="auto" my="7" align="center" justify="center">
+    <Flex
+      w="100%"
+      h={['50px', '75px', '100px']}
+      mx="auto"
+      align="center"
+      justify="center"
+      position="relative"
+    >
       {showBackButton && (
         <Link href="/" passHref>
           <ChakraLink
             aria-label="button"
             position="absolute"
-            left="140px"
+            left={['16px', '140px']}
             textDecoration="none"
+            w={['16px', '24px', '32px']}
+            h={['16px', '24px', '32px']}
           >
             <Image src={backIcon} alt="arrow back icon" />
           </ChakraLink>
         </Link>
       )}
-      <Image src={logoImg} alt="world trip"></Image>
+      <Flex w={['80px', '130px', '180px']}>
+        <Image src={logoImg} alt="world trip"></Image>
+      </Flex>
     </Flex>
   )
 }
