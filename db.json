@@ -1,0 +1,262 @@
+{
+  "continents": [
+    {
+      "title": "América do Norte",
+      "slug": "america-do-norte",
+      "totalCountries": 23,
+      "totalLanguages": 493,
+      "id": "0",
+      "description": "Lorem ipsum dolor sit amet",
+      "imageUrl": "https://images.unsplash.com/26/city-scape.jpg?auto=format&fit=crop&w=1170&q=80",
+      "topDestinations": [
+        {
+          "name": "Nova Iorque",
+          "country": "Estados Unidos",
+          "imageUrl": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png"
+        },
+        {
+          "name": "Miami",
+          "country": "Estados Unidos",
+          "imageUrl": "https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?auto=format&fit=crop&w=864&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png"
+        },
+        {
+          "name": "Los Angeles",
+          "country": "Estados Unidos",
+          "imageUrl": "https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png"
+        },
+        {
+          "name": "Las Vegas",
+          "country": "Estados Unidos",
+          "imageUrl": "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=874&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png"
+        },
+        {
+          "name": "Orlando",
+          "country": "Estados Unidos",
+          "imageUrl": "https://images.unsplash.com/photo-1609184889233-eff6dd93def4?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-states-of-america/flag-round-250.png"
+        },
+        {
+          "name": "Cancun",
+          "country": "México",
+          "imageUrl": "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?auto=format&fit=crop&w=1100&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/mexico/flag-round-250.png"
+        }
+      ]
+    },
+    {
+      "title": "América do Sul",
+      "id": "1",
+      "slug": "america-do-sul",
+      "totalCountries": 12,
+      "totalLanguages": 448,
+      "description": "Consectetur adipisicing elit",
+      "topDestinations": [
+        {
+          "name": "Rio de Janeiro",
+          "country": "Brasil",
+          "imageUrl": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/brazil/flag-round-250.png"
+        },
+        {
+          "name": "Buenos Aires",
+          "country": "Argentina",
+          "imageUrl": "https://images.unsplash.com/photo-1586354822120-bf910e563cdf?auto=format&fit=crop&w=774&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/argentina/flag-round-250.png"
+        }
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1547212543-344cfbef90b3?auto=format&fit=crop&w=1170&q=80"
+    },
+    {
+      "title": "Ásia",
+      "id": "2",
+      "totalCountries": 49,
+      "totalLanguages": 2322,
+      "slug": "asia",
+      "description": "Arum natus in dolor dicta",
+      "imageUrl": "https://images.unsplash.com/photo-1533132824464-d286d371ffe7?auto=format&fit=crop&w=1170&q=80",
+      "topDestinations": [
+        {
+          "name": "Hong Kong",
+          "country": "China",
+          "imageUrl": "https://images.unsplash.com/photo-1553560015-3cad96043542?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/hongkong/flag-round-250.png"
+        },
+        {
+          "name": "Bangkok",
+          "country": "Tailândia",
+          "imageUrl": "https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/thailand/flag-round-250.png"
+        },
+        {
+          "name": "Macau",
+          "country": "China",
+          "imageUrl": "https://images.unsplash.com/photo-1561958635-a4f95d86c771?auto=format&fit=crop&w=1031&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/macau/flag-round-250.png"
+        },
+        {
+          "name": "Singapura",
+          "country": "Singapura",
+          "imageUrl": "https://images.unsplash.com/photo-1496939376851-89342e90adcd?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/singapore/flag-round-250.png"
+        },
+        {
+          "name": "Dubai",
+          "country": "Emirados Árabes",
+          "imageUrl": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-arab-emirates/flag-round-250.png"
+        },
+        {
+          "name": "Kuala Lumpur",
+          "country": "Malásia",
+          "imageUrl": "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=864&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/malaysia/flag-round-250.png"
+        },
+        {
+          "name": "Istanbul",
+          "country": "Turquia",
+          "imageUrl": "https://images.unsplash.com/photo-1518084823714-2f59a7315a39?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/turkey/flag-round-250.png"
+        },
+        {
+          "name": "Deli",
+          "country": "Índia",
+          "imageUrl": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/india/flag-round-250.png"
+        },
+        {
+          "name": "Antalya",
+          "country": "Turquia",
+          "imageUrl": "https://images.unsplash.com/photo-1605382628707-0aa0593fba19?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/turkey/flag-round-250.png"
+        },
+        {
+          "name": "Shenzhen",
+          "country": "China",
+          "imageUrl": "https://images.unsplash.com/photo-1522614288668-a697127e9b21?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/china/flag-round-250.png"
+        }
+      ]
+    },
+    {
+      "title": "África",
+      "slug": "africa",
+      "totalCountries": 54,
+      "totalLanguages": 2110,
+      "id": "3",
+      "description": "Beatae sapiente nostrum quibusdam",
+      "imageUrl": "https://images.unsplash.com/photo-1575551424332-49525ff5c379?auto=format&fit=crop&w=1170&q=80",
+      "topDestinations": [
+        {
+          "name": "Cairo",
+          "country": "Egito",
+          "imageUrl": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/egypt/flag-round-250.png"
+        }
+      ]
+    },
+    {
+      "title": "Europa",
+      "slug": "europa",
+      "totalCountries": 51,
+      "totalLanguages": 234,
+      "id": "4",
+      "description": "Minima doloribus sunt",
+      "imageUrl": "https://images.unsplash.com/photo-1473951574080-01fe45ec8643?auto=format&fit=crop&w=1204&q=80",
+      "topDestinations": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "imageUrl": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/united-kingdom/flag-round-250.png"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "imageUrl": "https://images.unsplash.com/photo-1500313830540-7b6650a74fd0?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/france/flag-round-250.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "imageUrl": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=876&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/italy/flag-round-250.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "imageUrl": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/czech-republic/flag-round-250.png"
+        },
+        {
+          "name": "Amsterdã",
+          "country": "Holanda",
+          "imageUrl": "https://images.unsplash.com/photo-1468436385273-8abca6dfd8d3?auto=format&fit=crop&w=805&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/netherlands/flag-round-250.png"
+        },
+        {
+          "name": "Barcelona",
+          "country": "Espanha",
+          "imageUrl": "https://images.unsplash.com/photo-1583395838144-09c70d270bda?auto=format&fit=crop&w=772&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/spain/flag-round-250.png"
+        },
+        {
+          "name": "Milão",
+          "country": "Itália",
+          "imageUrl": "https://images.unsplash.com/photo-1512236077335-f1cda9239c11?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/spain/flag-round-250.png"
+        },
+        {
+          "name": "Viena",
+          "country": "Áustria",
+          "imageUrl": "https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=872&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/austria/flag-round-250.png"
+        },
+        {
+          "name": "Berlim",
+          "country": "Alemanha",
+          "imageUrl": "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/germany/flag-round-250.png"
+        },
+        {
+          "name": "Atenas",
+          "country": "Grécia",
+          "imageUrl": "https://images.unsplash.com/photo-1590746197887-4420dda1e540?auto=format&fit=crop&w=774&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/greece/flag-round-250.png"
+        }
+      ]
+    },
+    {
+      "title": "Oceania",
+      "id": "5",
+      "totalCountries": 14,
+      "totalLanguages": 1250,
+      "slug": "oceania",
+      "description": "Maxime officiis suscipit autem",
+      "imageUrl": "https://images.unsplash.com/photo-1528800223624-764941bb49db?auto=format&fit=crop&w=1170&q=80",
+      "topDestinations": [
+        {
+          "name": "Sydney",
+          "country": "Austrália",
+          "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/australia/flag-round-250.png"
+        },
+        {
+          "name": "Melbourne",
+          "country": "Austrália",
+          "imageUrl": "https://images.unsplash.com/photo-1595434971780-79d5c20c5090?auto=format&fit=crop&w=1032&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/australia/flag-round-250.png"
+        },
+        {
+          "name": "Auckland",
+          "country": "Nova Zelândia",
+          "imageUrl": "https://images.unsplash.com/photo-1600208669687-f19af3638cb9?auto=format&fit=crop&w=870&q=80",
+          "countryFlag": "https://cdn.countryflags.com/thumbs/new-zealand/flag-round-250.png"
+        }
+      ]
+    }
+  ]
+}
