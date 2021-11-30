@@ -6,7 +6,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-type ContinentInfo = {
+export type ContinentInfo = {
   id: string
   slug: string
   title: string

@@ -1,63 +1,20 @@
 import { SimpleGrid, Divider, Text, Box, Flex } from '@chakra-ui/react'
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 
 import { Banner } from '../components/Banner'
-import { ContinentsCarousel } from '../components/ContinentsCarousel'
+import {
+  ContinentInfo,
+  ContinentsCarousel,
+} from '../components/ContinentsCarousel'
 import { Header } from '../components/Header'
 import { TravelType } from '../components/TravelType'
+import { api } from '../services/api'
 
-const continents = [
-  {
-    title: 'América do Norte',
-    slug: 'america-do-norte',
-    id: '0',
-    description: 'Lorem ipsum dolor sit amet',
-    imageUrl:
-      'https://images.unsplash.com/26/city-scape.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    title: 'América do Sul',
-    id: '1',
-    slug: 'america-do-sul',
-    description: 'Consectetur adipisicing elit',
-    imageUrl:
-      'https://images.unsplash.com/photo-1547212543-344cfbef90b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    title: 'Ásia',
-    id: '2',
-    slug: 'asia',
-    description: 'Arum natus in dolor dicta',
-    imageUrl:
-      'https://images.unsplash.com/photo-1533132824464-d286d371ffe7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    title: 'África',
-    slug: 'africa',
-    id: '3',
-    description: 'Beatae sapiente nostrum quibusdam',
-    imageUrl:
-      'https://images.unsplash.com/photo-1575551424332-49525ff5c379?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-  {
-    title: 'Europa',
-    slug: 'europa',
-    id: '4',
-    description: 'Minima doloribus sunt',
-    imageUrl:
-      'https://images.unsplash.com/photo-1473951574080-01fe45ec8643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1204&q=80',
-  },
-  {
-    title: 'Oceania',
-    id: '5',
-    slug: 'oceania',
-    description: 'Maxime officiis suscipit autem',
-    imageUrl:
-      'https://images.unsplash.com/photo-1528800223624-764941bb49db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  },
-]
+type HomeProps = {
+  continents: ContinentInfo[]
+}
 
-const Home: NextPage = () => {
+const Home: NextPage<HomeProps, JSX.Element> = ({ continents }) => {
   return (
     <Flex maxW="100vw" direction="column">
       <Header />
@@ -117,6 +74,17 @@ const Home: NextPage = () => {
       </Box>
     </Flex>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const response = await api.get<ContinentInfo[]>('/continents')
+  const continents = response.data
+
+  return {
+    props: {
+      continents,
+    },
+  }
 }
 
 export default Home
