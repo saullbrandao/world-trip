@@ -1,4 +1,4 @@
-import { Stack, Text } from '@chakra-ui/react'
+import { Stack, Text, Box, useMediaQuery } from '@chakra-ui/react'
 import Image from 'next/image'
 
 type TravelTypeProps = {
@@ -8,10 +8,29 @@ type TravelTypeProps = {
 }
 
 export const TravelType = ({ image, imageAlt, title }: TravelTypeProps) => {
+  const [isLargerThan768] = useMediaQuery([
+    '(min-width: 768px)',
+    '(display-mode: browser)',
+  ])
+
   return (
-    <Stack as="li" align="center">
-      <Image src={image} alt={imageAlt} width={85} height={85} />
-      <Text color="gray.600" fontWeight={600} fontSize={24} lineHeight="36px">
+    <Stack
+      flexDirection={['row', 'row', 'column']}
+      align="center"
+      justify="center"
+    >
+      {isLargerThan768 ? (
+        <Image src={image} alt={imageAlt} width={85} height={85} />
+      ) : (
+        <Box w="8px" h="8px" bg="orange.300" borderRadius="50%" mr="8px" />
+      )}
+      <Text
+        color="gray.600"
+        fontWeight={600}
+        fontSize={['18px', '24px']}
+        lineHeight={['27px', '36px']}
+        textAlign="center"
+      >
         {title}
       </Text>
     </Stack>
