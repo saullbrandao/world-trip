@@ -8,16 +8,39 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import { CityCard } from '../components/CityCard'
 import { Header } from '../components/Header'
+import { api } from '../services/api'
 
-const Continent: NextPage = () => {
+type TopDestinations = {
+  name: string
+  country: string
+  imageUrl: string
+  countryFlag: string
+}
+
+type ContinentType = {
+  title: string
+  id: string
+  slug: string
+  totalCountries: number
+  totalLanguages: number
+  description: string
+  imageUrl: string
+  topDestinations: TopDestinations[]
+}
+
+type ContinentProps = {
+  continent: ContinentType
+}
+
+const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
   return (
     <Flex maxW="100vw" direction="column">
       <Header showBackButton />
       <Box
-        bg={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url('https://images.unsplash.com/photo-1473951574080-01fe45ec8643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1204&q=80')`}
+        bg={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(${continent.imageUrl})`}
         bgPosition="center"
         bgRepeat="no-repeat"
         bgSize="cover"
@@ -35,15 +58,17 @@ const Continent: NextPage = () => {
           left="140px"
           bottom="60px"
         >
-          Europa
+          {continent.title}
         </Text>
       </Box>
       <SimpleGrid columns={2} spacing="70px" mx="140px" mb="80px">
         <Text textAlign="justify" fontSize="24px" lineHeight="36px">
-          A Europa é, por convenção, um dos seis continentes do mundo.
-          Compreendendo a península ocidental da Eurásia, a Europa geralmente
-          divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-          rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A eligendi
+          ratione, voluptatibus veniam eveniet cumque perferendis aliquam
+          mollitia repellat similique dolores rem exercitationem? Dignissimos
+          voluptates dolores deleniti, reprehenderit obcaecati accusamus
+          necessitatibus cupiditate odit officiis nihil! Lorem ipsum dolor sit
+          amet consectetur.
         </Text>
         <Flex justify="space-around" align="center">
           <Stack justify="center" align="center" textAlign="center">
@@ -54,7 +79,7 @@ const Continent: NextPage = () => {
               fontWeight="600"
               color="orange.300"
             >
-              50
+              {continent.totalCountries}
             </Text>
             <Text
               as="span"
@@ -74,7 +99,7 @@ const Continent: NextPage = () => {
               fontWeight="600"
               color="orange.300"
             >
-              60
+              {continent.totalLanguages}
             </Text>
             <Text
               as="span"
@@ -94,7 +119,7 @@ const Continent: NextPage = () => {
               fontWeight="600"
               color="orange.300"
             >
-              27
+              {continent.topDestinations.length}
             </Text>
             <Text
               as="span"
@@ -113,27 +138,50 @@ const Continent: NextPage = () => {
         Cidades +100
       </Heading>
       <Wrap mb="35px" mx="140px" flexWrap="wrap">
-        <WrapItem>
-          <CityCard />
-        </WrapItem>
-        <WrapItem>
-          <CityCard />
-        </WrapItem>
-        <WrapItem>
-          <CityCard />
-        </WrapItem>
-        <WrapItem>
-          <CityCard />
-        </WrapItem>
-        <WrapItem>
-          <CityCard />
-        </WrapItem>
-        <WrapItem>
-          <CityCard />
-        </WrapItem>
+        {continent.topDestinations.map(city => (
+          <WrapItem key={city.name}>
+            <CityCard city={city} />
+          </WrapItem>
+        ))}
       </Wrap>
     </Flex>
   )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await api.get<ContinentType[]>('/continents')
+  const paths = response.data.map(({ slug }) => ({
+    params: {
+      slug,
+    },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params || !params.slug) {
+    return {
+      notFound: true,
+    }
+  }
+
+  const { slug } = params
+
+  const response = await api.get<ContinentType[]>('/continents', {
+    params: {
+      slug,
+    },
+  })
+
+  return {
+    props: {
+      continent: response.data[0],
+    },
+  }
 }
 
 export default Continent

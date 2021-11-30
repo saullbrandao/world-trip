@@ -1,11 +1,20 @@
 import { Stack, Flex, Text, Image } from '@chakra-ui/react'
 
-export const CityCard = () => {
+type CityCardProps = {
+  city: {
+    name: string
+    country: string
+    imageUrl: string
+    countryFlag: string
+  }
+}
+
+export const CityCard = ({ city }: CityCardProps) => {
   return (
-    <Stack w="256px" borderRadius="4px" spacing={0}>
+    <Stack w="256px" borderRadius="4px" spacing={0} boxShadow="xs">
       <Image
         borderTopRadius="4px"
-        src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        src={city.imageUrl}
         alt="city"
         width="256"
         height="173"
@@ -28,7 +37,7 @@ export const CityCard = () => {
             fontSize="20px"
             lineHeight="25px"
           >
-            Londres
+            {city.name}
           </Text>
           <Text
             fontFamily="Barlow"
@@ -36,10 +45,18 @@ export const CityCard = () => {
             fontWeight="500"
             lineHeight="25px"
           >
-            Reino Unido
+            {city.country}
           </Text>
         </Stack>
-        <Text alignSelf="center">Bandeira</Text>
+        <Image
+          alignSelf="center"
+          alt={`${city.country} flag`}
+          w="30px"
+          h="30px"
+          boxShadow="xs"
+          borderRadius="50%"
+          src={city.countryFlag}
+        />
       </Flex>
     </Stack>
   )
