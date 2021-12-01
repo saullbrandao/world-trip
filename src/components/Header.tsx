@@ -12,7 +12,7 @@ export const Header = ({ showBackButton = false }: HeaderProps) => {
   return (
     <Flex
       w="100%"
-      h={['50px', '75px', '100px']}
+      h={['50px', '75px', '75px', '100px']}
       mx="auto"
       align="center"
       justify="center"
@@ -23,16 +23,16 @@ export const Header = ({ showBackButton = false }: HeaderProps) => {
           <ChakraLink
             aria-label="button"
             position="absolute"
-            left={['16px', '140px']}
+            left={['16px', '40px', '40px', '140px']}
             textDecoration="none"
-            w={['16px', '24px', '32px']}
-            h={['16px', '24px', '32px']}
+            w={['16px', '24px', '24px', '32px']}
+            h={['16px', '24px', '24px', '32px']}
           >
             <Image src={backIcon} alt="arrow back icon" />
           </ChakraLink>
         </Link>
       )}
-      <Flex w={['80px', '130px', '180px']}>
+      <Flex w={['80px', '130px', '130px', '180px']}>
         <Image src={logoImg} alt="world trip"></Image>
       </Flex>
     </Flex>
