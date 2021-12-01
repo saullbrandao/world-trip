@@ -1,10 +1,11 @@
 import {
   SimpleGrid,
   Text,
-  Box,
+  Tooltip,
   Heading,
   Stack,
   Flex,
+  Image,
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'
@@ -132,15 +133,21 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
             >
               {continent.topDestinations.length}
             </Text>
-            <Text
-              as="span"
-              color="gray.600"
-              fontSize={['18px', '21px', '24px']}
-              lineHeight={['27px', '31px', '36px']}
-              fontWeight="600"
-            >
-              Cidades +100
-            </Text>
+            <Flex>
+              <Text
+                as="span"
+                color="gray.600"
+                fontSize={['18px', '21px', '24px']}
+                lineHeight={['27px', '31px', '36px']}
+                fontWeight="600"
+                mr="5px"
+              >
+                Cidades +100
+              </Text>
+              <Tooltip label="As 100 cidades mais visitadas do mundo">
+                <Image src="/images/info.svg" alt="information" />
+              </Tooltip>
+            </Flex>
           </Stack>
         </Flex>
       </SimpleGrid>
