@@ -27,8 +27,8 @@ export const TravelType = ({ image, imageAlt, title }: TravelTypeProps) => {
       <Text
         color="gray.600"
         fontWeight={600}
-        fontSize={['18px', '24px']}
-        lineHeight={['27px', '36px']}
+        fontSize={['18px', '21px', '21px', '24px']}
+        lineHeight={['27px', '31px', '31px', '36px']}
         textAlign="center"
       >
         {title}
