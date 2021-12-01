@@ -26,12 +26,12 @@ export const Banner = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       w="100%"
-      h={['160px', '250px', '340px']}
+      h={['160px', '250px', '250px', '340px']}
     >
       <Stack alignSelf="center" textAlign="left">
         <Heading
-          fontSize={['20px', '28px', '36px']}
-          lineHeight={['30px', '42px', '54px']}
+          fontSize={['20px', '28px', '28px', '36px']}
+          lineHeight={['30px', '42px', '42px', '54px']}
           fontWeight="500"
           color="gray.100"
         >
@@ -39,8 +39,8 @@ export const Banner = () => {
           infinitas possibilidades.
         </Heading>
         <Text
-          fontSize={['14px', '16px', '20px']}
-          lineHeight={['21px', '25px', '30px']}
+          fontSize={['14px', '16px', '16px', '20px']}
+          lineHeight={['21px', '25px', '25px', '30px']}
           color="gray.200"
         >
           Chegou a hora de tirar do papel a viagem que você sempre sonhou.
