@@ -23,8 +23,8 @@ const Home: NextPage<HomeProps, JSX.Element> = ({ continents }) => {
         as="ul"
         templateColumns={['repeat(2, 1fr)', 'repeat(2, 1fr)', 'repeat(5, 1fr)']}
         justifyItems="center"
-        my={['36px', '76px', '120px']}
-        mx={['50px', '50px', '140px']}
+        my={['36px', '75px', '75px', '120px']}
+        mx={['50px', '50px', '75px', '140px']}
       >
         <GridItem
           as="li"
@@ -89,10 +89,10 @@ const Home: NextPage<HomeProps, JSX.Element> = ({ continents }) => {
       />
       <Text
         textAlign="center"
-        my={['24px', '52px']}
+        my={['24px', '38px', '52px']}
         mx={['39px', '39px', '140px']}
-        fontSize={['20px', '28px', '36px']}
-        lineHeight={['30px', '42px', '54px']}
+        fontSize={['20px', '28px', '28px', '36px']}
+        lineHeight={['30px', '42px', '42px', '54px']}
         fontWeight={500}
       >
         Vamos nessa? <br />
@@ -101,10 +101,10 @@ const Home: NextPage<HomeProps, JSX.Element> = ({ continents }) => {
 
       <Box
         mx="auto"
-        mb={['24px', '40px']}
+        mb={[0, '24px', '40px']}
         w="100%"
         maxW="1240px"
-        h={['250px', '450px']}
+        h={['250px', '350px', '450px']}
         bg="gray.600"
         textAlign="center"
         align="center"
