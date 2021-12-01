@@ -48,14 +48,14 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
         align={['center', 'center', 'normal']}
         bgSize="cover"
         w="100%"
-        h={['150px', '500px']}
+        h={['150px', '250px', '350px', '500px']}
         position="relative"
-        mb={['24px', '80px']}
+        mb={['24px', '52px', '52px', '80px']}
       >
         <Text
           fontWeight="600"
-          fontSize={['28px', '38px', '48px']}
-          lineHeight={['48px', '60px', '72px']}
+          fontSize={['28px', '38px', '38px', '48px']}
+          lineHeight={['48px', '60px', '60px', '72px']}
           color="gray.100"
           position={['relative', 'relative', 'absolute']}
           left={['0', '0', '140px']}
@@ -67,13 +67,13 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
       <SimpleGrid
         columns={[1, 1, 2]}
         spacing={['16px', '43px', '70px']}
-        mx={['16px', '16px', '16px', '140px']}
+        mx={['16px', '16px', '16px', '32px', '140px']}
         mb={['40px', '60px', '80px']}
       >
         <Text
           textAlign="justify"
           fontSize={['14px', '19px', '19px', '24px']}
-          lineHeight={['21px', '21px', '26px', '36px']}
+          lineHeight={['21px', '21px', '26px', '26px', '36px']}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A eligendi
           ratione, voluptatibus veniam eveniet cumque perferendis aliquam
@@ -96,8 +96,8 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
             <Text
               as="span"
               color="gray.600"
-              fontSize={['18px', '21px', '24px']}
-              lineHeight={['27px', '31px', '36px']}
+              fontSize={['18px', '21px', '21px', '24px']}
+              lineHeight={['27px', '31px', '31px', '36px']}
               fontWeight="600"
             >
               Países
@@ -116,8 +116,8 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
             <Text
               as="span"
               color="gray.600"
-              fontSize={['18px', '21px', '24px']}
-              lineHeight={['27px', '31px', '36px']}
+              fontSize={['18px', '21px', '21px', '24px']}
+              lineHeight={['27px', '31px', '31px', '36px']}
               fontWeight="600"
             >
               Línguas
@@ -137,8 +137,8 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
               <Text
                 as="span"
                 color="gray.600"
-                fontSize={['18px', '21px', '24px']}
-                lineHeight={['27px', '31px', '36px']}
+                fontSize={['18px', '21px', '21px', '24px']}
+                lineHeight={['27px', '31px', '31px', '36px']}
                 fontWeight="600"
                 mr="5px"
               >
@@ -156,12 +156,16 @@ const Continent: NextPage<ContinentProps, JSX.Element> = ({ continent }) => {
         fontSize={['24px', '30px', '36px']}
         lineHeight={['36px', '45px', '54px']}
         fontWeight="500"
-        mx={['16px', '140px']}
+        mx={['16px', '16px', '16px', '32px', '140px']}
         mb={['20px', '30px', '40px']}
       >
         Cidades +100
       </Heading>
-      <Wrap mb="35px" mx={['60px', '140px']} flexWrap="wrap">
+      <Wrap
+        mb="35px"
+        mx={['60px', '16px', '16px', '32px', '140px']}
+        flexWrap="wrap"
+      >
         {continent.topDestinations.map(city => (
           <WrapItem key={city.name}>
             <CityCard city={city} />
